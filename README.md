@@ -28,4 +28,4 @@ Este dominio se encarga exclusivamente de comunicar eventos relevantes a los usu
 
 ![Diagrama de casos de uso - Notification](diagrama-casos-uso-notification.png)
 
-> Diagrama fuente editable en [`diagrama-casos-uso-notification.drawio`](diagrama-casos-uso-notification.drawio).
+
