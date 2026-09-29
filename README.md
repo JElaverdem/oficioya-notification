@@ -2,6 +2,7 @@
 
 ## Requerimientos Funcionales - Dominio Notification
 
+| Campo | Descripción|
 |---|---|
 | **Proyecto** | OficioYa |
 | **Squad** | 4 |
