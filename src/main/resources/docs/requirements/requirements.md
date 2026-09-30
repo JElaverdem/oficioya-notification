@@ -39,7 +39,7 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, el trabajador debe de tener el tiempo disponible para aceptar la solicitud, debe de haber aceptado la solicitud.* |
 | **Actor** | *Contratante, trabajador y sistema de solicitudes.* |
 | **Flujo principal** | 1. El trabajdor revisa las solicitudes que tiene abiertas.<br>2. El trabajador escoge la que más le convenga. <br>3. El sistema revisa que no interfiera con las ya aceptadas. <br>4.Se le permite al trabajador aceptar la solicitud del contratante.<br>5.Se actualiza el estado de la solicitud.<br>6.Se le envía notificación al contratante que su solicitud fue aceptada. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 1](../images/DCU-REQ-NOT-001.png) |
 | **Poscondiciones** | *La solicitud aceptada y la notificación llegando al contratante.* |
 
 
@@ -53,7 +53,7 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, el trabajador ya debe tener una solicitud aceptada del contratante al que se le va a enviar la notificación.* |
 | **Actor** | *Contratante y trabajador.* |
 | **Flujo principal** | 1. El trabajador escoge una solicitud aceptada.<br>2. El trabajador escoge cancelar la solicitud de trabajo.<br>3. El sistema envía una notificación al contratante de que su solicitud fue rechazada. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 2](../images/DCU-REQ-NOT-002.png) |
 | **Poscondiciones** | *Se espera como resultado la solicitud rechazada y la notificación enviada al contratante.* |
 
 ### 2.3 Requerimiento Funcional 3
@@ -66,7 +66,7 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, el trabajador ya debe de haber aceptado una solicitud de trabajo,la solicitud le aparece como aceptada al contratante debede ser cancelada antes de la hora y día del trabajo.* |
 | **Actor** | *Contratante y trabajador.* |
 | **Flujo principal** | 1. El contratante revisa los trabajos próximos.<br>2. El contratante escoge un trabajo y lo cancela.<br>3. El sistema envía una notificación al trabajador de que el trabajo fue cancelado. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 3](../images/DCU-REQ-NOT-003.png) |
 | **Poscondiciones** | *Se espera como resultado que el trabajo quede cancelado y que le llegue una notificación al trabajador.* |
 
 ### 2.4 Requerimiento Funcional 4
@@ -79,7 +79,7 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, los datos de la solicitud deben ser correctos.* |
 | **Actor** | *Contratante y trabajador/es.* |
 | **Flujo principal** | 1. El contratante termina de llenar los datos de su solicitud.<br>2. El contratante envía la solicitud a un o a muchos trabajadores.<br>3. El sistema envía la notificación de nueva solicitud al trabajador o trabajadores. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 4](../images/DCU-REQ-NOT-004.png) |
 | **Poscondiciones** | *La/s solicitud/es creadas y la/s notificacion/es enviadas al trabajador o trabajadores.* |
 
 ### 2.5 Requerimiento Funcional 5
@@ -92,7 +92,7 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, el contratante debe de haber creado y enviado la solicitud, la solicitud le debe de haber llegado al trabajador.* |
 | **Actor** | *Contratante y trabajador.* |
 | **Flujo principal** | 1. La notificación está en la bandeja de solicitudes del trabajador.<br>2. El trabajador escoge una de las solicitudes que tenga.<br>3. El trabajador rechaza la solicitud.<br>4.El sistema envía una notificación al contratante de que su solicitud fue rechazada. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 5](../images/DCU-REQ-NOT-005.png) |
 | **Poscondiciones** | *Se espera como resultado la solicitud rechazada y la notificación enviada al contratante.* |
 
 ### 2.6 Requerimiento Funcional 6
@@ -105,5 +105,5 @@ El sistema de notificación de OficioYa debe tener:
 | **Precondiciones** | *Para que el sistema cumpla con este requerimiento, la solicitud de trabajo ya debe de haber sido aceptada, el tiempo a aceptar es después de la hora del trabajo.* |
 | **Actor** | *Contratante y trabajador.* |
 | **Flujo principal** | 1. El trabajador termina el trabajo pedido.<br>2. El trabajador ingresa en la solicitud que terminó el trabajo.<br>3. El sistema envía una notificación al contratante de que el trabajo fue realizado. |
-| **Diagrama de caso de uso** | *imagen y link*|
+| **Diagrama de caso de uso** | ![Diagrama caso uso - 6](../images/DCU-REQ-NOT-006.png) |
 | **Poscondiciones** | *Se espera como resultado la solicitud como terminada y la notificación enviada al contratante.* |
