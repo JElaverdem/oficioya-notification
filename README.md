@@ -27,5 +27,8 @@ Este dominio se encarga exclusivamente de comunicar eventos relevantes a los usu
 *(Los diagramas se elaboraron sin mockups de interfaz gráfica, cumpliendo las restricciones del Sprint 1).*
 
 ![Diagrama de casos de uso - Notification](diagrama-casos-uso-notification.png)
+## Diagrama entidad-relación
+
+![ER Notification](ER-Notification.png)
 
 
