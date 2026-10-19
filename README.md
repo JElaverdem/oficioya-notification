@@ -15,12 +15,12 @@
 
 ## Diagrama entidad-relación
 
-![ER Notification](/src/main/java/resources/docs/uml/ER-Notification.png)
+![ER Notification](/src/main/resources/docs/uml/ER-Notification.png)
 
 ## Diagrama de clases
 
-![Diagrama de clases Notification](/src/main/java/resources/docs/uml/DiagramaClases-Notification.png)
+![Diagrama de clases Notification](/src/main/resources/docs/uml/DiagramaClases-Notification.png)
 
 ## Mock Up
 
-![Mock Up Solicitud entrante](/src/main/java/resources/docs/images/MockUp-SolicitudEntrante.png)
+![Mock Up Solicitud entrante](/src/main/resources/docs/images/MockUp-SolicitudEntrante.png)
