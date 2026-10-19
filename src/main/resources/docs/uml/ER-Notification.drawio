@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="0sZQcBnF1z5MDbTKO573">
+    <mxGraphModel dx="1526" dy="2055" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NT" parent="1" style="html=1;whiteSpace=wrap;overflow=fill;verticalAlign=top;fillColor=#161b22;strokeColor=#4b5563;fontColor=#e5e7eb;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;color: rgb(229, 231, 235); font-size: 12px;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; align=&quot;center&quot; bgcolor=&quot;#7e22ce&quot;&gt;&lt;font color=&quot;#fff&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;i&gt;«enum»&lt;/i&gt;&lt;br&gt;&lt;b&gt;NotificationType&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#facc15&quot;&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;u&gt;&lt;b&gt;nameType&lt;/b&gt;&lt;/u&gt;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;varchar(40)&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;INCOMING_REQUEST&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;ACCEPTED_REQUEST&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;REJECTED_REQUEST&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;CANCELED_BY_CONTRACTOR&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;CANCELED_BY_WORKER&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;COMPLETED_WORK&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="212" width="360" x="30" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="NF" parent="1" style="html=1;whiteSpace=wrap;overflow=fill;verticalAlign=top;fillColor=#161b22;strokeColor=#4b5563;fontColor=#e5e7eb;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;color: rgb(229, 231, 235); font-size: 12px;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; align=&quot;center&quot; bgcolor=&quot;#1d4ed8&quot;&gt;&lt;font color=&quot;#fff&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Notification&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#facc15&quot;&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;u&gt;&lt;b&gt;id&lt;/b&gt;&lt;/u&gt;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;Long NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;FK1&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;receiverId&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;Long NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;title&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;varchar(100) NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;photoUrl&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;varchar(200) NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#22d3ee&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;workDate&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;TIMESTAMP NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;exactAddress&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;String NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;b style=&quot;color: rgb(34, 211, 238);&quot;&gt;FK2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;senderId&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;Long NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b style=&quot;color: rgb(34, 211, 238);&quot;&gt;FK3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;&lt;span style=&quot;color: light-dark(rgb(156, 163, 175), rgb(36, 38, 41));&quot;&gt;varchar(40) NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b style=&quot;color: rgb(34, 211, 238);&quot;&gt;FK4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;requestId&lt;/td&gt;&lt;td&gt;&lt;span style=&quot;color: rgb(156, 163, 175);&quot;&gt;Long NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;dateSent&lt;/td&gt;&lt;td&gt;&lt;span style=&quot;color: rgb(156, 163, 175);&quot;&gt;TIMESTAMP NOT NULL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="246" width="380" x="500" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="US" parent="1" style="html=1;whiteSpace=wrap;overflow=fill;verticalAlign=top;fillColor=#161b22;strokeColor=#4b5563;fontColor=#e5e7eb;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;color: rgb(229, 231, 235); font-size: 12px;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; align=&quot;center&quot; bgcolor=&quot;#4b5563&quot;&gt;&lt;font color=&quot;#fff&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;i&gt;«dominio Usuario»&lt;/i&gt;&lt;br&gt;&lt;b&gt;User&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#facc15&quot;&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;u&gt;&lt;b&gt;id&lt;/b&gt;&lt;/u&gt;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;Long NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="68" width="340" x="1010" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="RQ" parent="1" style="html=1;whiteSpace=wrap;overflow=fill;verticalAlign=top;fillColor=#161b22;strokeColor=#4b5563;fontColor=#e5e7eb;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;color: rgb(229, 231, 235); font-size: 12px;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; align=&quot;center&quot; bgcolor=&quot;#4b5563&quot;&gt;&lt;font color=&quot;#fff&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;i&gt;«dominio Service»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Request&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;36&quot;&gt;&lt;font color=&quot;#facc15&quot;&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;u&gt;&lt;b&gt;id&lt;/b&gt;&lt;/u&gt;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#9ca3af&quot;&gt;Long NOT NULL&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="68" width="340" x="970" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="NT" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=default;fontColor=#e5e7eb;labelBackgroundColor=#0f1117;entryX=0.003;entryY=0.78;entryDx=0;entryDy=0;entryPerimeter=0;" target="NF" value="">
+          <mxGeometry relative="1" x="-0.2083" as="geometry" />
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-4" connectable="0" parent="e1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8376" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-5" connectable="0" parent="e1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.7451" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="US" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=default;fontColor=#e5e7eb;labelBackgroundColor=#0f1117;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="NF" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-10" connectable="0" parent="e2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.684" y="-2" as="geometry">
+            <mxPoint x="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-11" connectable="0" parent="e2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7932" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="RQ" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=default;fontColor=#e5e7eb;labelBackgroundColor=none;entryX=1.003;entryY=0.867;entryDx=0;entryDy=0;entryPerimeter=0;" target="NF" value="">
+          <mxGeometry relative="1" x="-0.1445" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-6" connectable="0" parent="e3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span&gt;1..*&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.6294" y="-1" as="geometry">
+            <mxPoint x="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-7" connectable="0" parent="e3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7368" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-8" edge="1" parent="1" source="US" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=default;fontColor=#e5e7eb;labelBackgroundColor=#0f1117;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="NF" value="">
+          <mxGeometry relative="1" x="0.0595" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="-49" />
+              <mxPoint x="1000" y="-50" />
+              <mxPoint x="960" y="-50" />
+              <mxPoint x="960" y="62.5" />
+            </Array>
+            <mxPoint x="990" y="-50" as="sourcePoint" />
+            <mxPoint x="920" y="91" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-13" connectable="0" parent="xS_dWxguTM8FDt1eFQwM-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8152" y="1" as="geometry">
+            <mxPoint x="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xS_dWxguTM8FDt1eFQwM-14" connectable="0" parent="xS_dWxguTM8FDt1eFQwM-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8768" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
