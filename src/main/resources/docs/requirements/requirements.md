@@ -25,7 +25,7 @@ El sistema de notificación de OficioYa debe tener:
 4. Si la notificacion push es de una solicitud aceptada, esta dirá con qué trabajador fue, qué día y a qué horas es el trabajo.
 5. Si la notificacion push es de un trabajo cancelado por el contratante, esta dirá con qué contratante fue, qué día y a qué horas es el trabajo.
 6. Si la notificacion push es de un trabajo cancelado por el trabajador, esta dirá con qué trabajador fue, qué día y a qué horas es el trabajo.
-7. Si la notificacion push es de un trabajo terminado, esta dirá con qué trabajador fue, qué día y a qué horas es el trabajo.
+7. Si la notificacion push es de un trabajo terminado, esta dirá con qué trabajador fue, qué día, a qué horas es el trabajo y a qué horas terminó el trabajo.
 
 ## 2. Diagramas de caso de uso
 
