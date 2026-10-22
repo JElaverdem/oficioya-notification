@@ -1,5 +1,5 @@
 package oficioya_notification.model;
 
 public enum NotificationType {
-    
+    INCOMING_REQUEST, ACCEPTED_REQUEST, REJECTED_REQUEST, CANCELLED_BY_CONTRACTOR, CANCELLED_BY_WORKER, COMPLETED_WORK
 }
