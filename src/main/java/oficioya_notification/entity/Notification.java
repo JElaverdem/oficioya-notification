@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import oficioya_notification.model.NotificationType;
 
 @Entity 
+@Table(name = "Notifications")
 public class Notification {
     @Id
     private UUID id;
