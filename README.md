@@ -26,6 +26,7 @@
 ### Link
 [Link del figma](https://www.figma.com/make/wy8eVjfR1SbrWb3wUqMIkM/Sistema-de-calificaci%C3%B3n-5-estrellas?t=FlzxIc07XaISpXqc-20&fullscreen=1)
 
+### Fotos
 ![Solicitud Entrante](/src/main/resources/docs/images/SolicitudEntrante.png)
 ![Solicitud Rechazada](/src/main/resources/docs/images/SolicitudRechazada.png)
 ![Solicitud Aceptada](/src/main/resources/docs/images/SolicitudAceptada.png)
