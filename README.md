@@ -23,4 +23,12 @@
 
 ## Mock Up
 
-![Mock Up Solicitud entrante](/src/main/resources/docs/images/MockUp-SolicitudEntrante.png)
+### Link
+[Link del figma](https://www.figma.com/make/wy8eVjfR1SbrWb3wUqMIkM/Sistema-de-calificaci%C3%B3n-5-estrellas?t=FlzxIc07XaISpXqc-20&fullscreen=1)
+
+![Solicitud Entrante](/src/main/resources/docs/images/SolicitudEntrante.png)
+![Solicitud Rechazada](/src/main/resources/docs/images/SolicitudRechazada.png)
+![Solicitud Aceptada](/src/main/resources/docs/images/SolicitudAceptada.png)
+![Solicitud Cancelada por trabajador](/src/main/resources/docs/images/CancelledByWorker.png)
+![Solicitud Cancelada por contratante](/src/main/resources/docs/images/CancelledByContractor.png)
+![Trabajo Terminado](/src/main/resources/docs/images/TrabajoTerminado.png)
