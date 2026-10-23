@@ -30,6 +30,6 @@
 ![Solicitud Entrante](/src/main/resources/docs/images/SolicitudEntrante.png)
 ![Solicitud Rechazada](/src/main/resources/docs/images/SolicitudRechazada.png)
 ![Solicitud Aceptada](/src/main/resources/docs/images/SolicitudAceptada.png)
-![Solicitud Cancelada por trabajador](/src/main/resources/docs/images/CancelledByWorker.png)
-![Solicitud Cancelada por contratante](/src/main/resources/docs/images/CancelledByContractor.png)
+![Trabajo Cancelado por trabajador](/src/main/resources/docs/images/CancelledByWorker.png)
+![Trabajo Cancelado por contratante](/src/main/resources/docs/images/CancelledByContractor.png)
 ![Trabajo Terminado](/src/main/resources/docs/images/TrabajoTerminado.png)
