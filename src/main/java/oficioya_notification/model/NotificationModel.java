@@ -2,20 +2,17 @@ package oficioya_notification.model;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
-import java.time.LocalDateTime;
 
 public class NotificationModel {
     private UUID id;
     private UUID receiverId;
-    private UUID senderId;
     private String title;
     private String description;
     private String photoUrl;
-    private LocalDateTime workDate;
-    private String exactAddress;
     private NotificationType type;
     private UUID requestId;
-    private LocalDateTime dateTimeCreated;
+    private LocalDateTime dateSent;
+    private LocalDateTime dateCreated;
 
     public NotificationModel(){
 
@@ -37,14 +34,6 @@ public class NotificationModel {
         return this.receiverId;
     }
 
-    public void setSenderId(UUID newId){
-        this.senderId = newId;
-    }
-
-    public UUID getSenderId(){
-        return this.senderId;
-    }
-
     public void setTitle(String newTitle){
         this.title = newTitle;
     }
@@ -59,22 +48,6 @@ public class NotificationModel {
 
     public String getDescription(){
         return this.description;
-    }
-
-    public void setWorkDate(LocalDateTime newDate){
-        this.workDate = newDate;
-    }
-
-    public LocalDateTime getWorkDate(){
-        return this.workDate;
-    }
-
-    public void setExactAddress(String newAdd){
-        this.exactAddress = newAdd;
-    }
-
-    public String getExactAddress(){
-        return this.exactAddress;
     }
 
     public void setState(NotificationType newType){
@@ -93,11 +66,19 @@ public class NotificationModel {
         return this.requestId;
     }
 
-    public void setDateTimeCreated(LocalDateTime newDate){
-        this.dateTimeCreated = newDate;
+     public void setDateSent(LocalDateTime newDate){
+        this.dateSent = newDate;
     }
 
-    public LocalDateTime getDateTimeCreated(){
-        return this.dateTimeCreated;
+    public LocalDateTime getDateSent(){
+        return this.dateSent;
+    }
+
+    public void setDateCreated(LocalDateTime newDate){
+        this.dateCreated = newDate;
+    }
+
+    public LocalDateTime getDateCreated(){
+        return this.dateCreated;
     }
 }

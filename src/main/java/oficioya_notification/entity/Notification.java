@@ -15,9 +15,6 @@ public class Notification {
     @Column(name = "receiver_id", nullable = false)
     private UUID receiverId;
 
-    @Column(name = "sender_id", nullable = false)
-    private UUID senderId;
-
     @Column(nullable = false)
     private String title;
 
@@ -25,20 +22,17 @@ public class Notification {
     private String description;
     private String photoUrl;
 
-    @Column(name = "work_date", nullable = false)
-    private LocalDateTime workDate;
-
-    @Column(name = "exact_address", nullable = false)
-    private String exactAddress;
-
     @Enumerated(EnumType.STRING)
     private NotificationType type;
 
     @Column(name = "request_id", nullable = false)
     private UUID requestId;
 
+    @Column(name = "date_sent", nullable = false)
+    private LocalDateTime dateSent;
+
     @Column(name = "date_created", nullable = false)
-    private LocalDateTime dateTimeCreated;
+    private LocalDateTime dateCreated;
 
     public Notification(){
 
@@ -60,14 +54,6 @@ public class Notification {
         return this.receiverId;
     }
 
-    public void setSenderId(UUID newId){
-        this.senderId = newId;
-    }
-
-    public UUID getSenderId(){
-        return this.senderId;
-    }
-
     public void setTitle(String newTitle){
         this.title = newTitle;
     }
@@ -82,22 +68,6 @@ public class Notification {
 
     public String getDescription(){
         return this.description;
-    }
-
-    public void setWorkDate(LocalDateTime newDate){
-        this.workDate = newDate;
-    }
-
-    public LocalDateTime getWorkDate(){
-        return this.workDate;
-    }
-
-    public void setExactAddress(String newAdd){
-        this.exactAddress = newAdd;
-    }
-
-    public String getExactAddress(){
-        return this.exactAddress;
     }
 
     public void setState(NotificationType newType){
@@ -116,11 +86,19 @@ public class Notification {
         return this.requestId;
     }
 
-    public void setDateTimeCreated(LocalDateTime newDate){
-        this.dateTimeCreated = newDate;
+     public void setDateSent(LocalDateTime newDate){
+        this.dateSent = newDate;
     }
 
-    public LocalDateTime getDateTimeCreated(){
-        return this.dateTimeCreated;
+    public LocalDateTime getDateSent(){
+        return this.dateSent;
+    }
+
+    public void setDateCreated(LocalDateTime newDate){
+        this.dateCreated = newDate;
+    }
+
+    public LocalDateTime getDateCreated(){
+        return this.dateCreated;
     }
 }
