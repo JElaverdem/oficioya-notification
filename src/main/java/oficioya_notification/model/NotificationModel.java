@@ -8,7 +8,6 @@ public class NotificationModel {
     private UUID receiverId;
     private String title;
     private String description;
-    private String photoUrl;
     private NotificationType type;
     private UUID requestId;
     private LocalDateTime dateSent;
