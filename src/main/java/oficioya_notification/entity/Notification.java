@@ -20,7 +20,6 @@ public class Notification {
 
     @Column(nullable = false)
     private String description;
-    private String photoUrl;
 
     @Enumerated(EnumType.STRING)
     private NotificationType type;
