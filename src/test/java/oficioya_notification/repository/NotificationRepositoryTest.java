@@ -32,6 +32,7 @@ public class NotificationRepositoryTest {
 
     @BeforeEach 
     void setup(){
+        nRepo.deleteAll();
         UUID n1NotId = UUID.randomUUID();
         UUID n1RecId = UUID.randomUUID();
         UUID n1ReqId = UUID.randomUUID();
@@ -134,7 +135,7 @@ public class NotificationRepositoryTest {
     @DisplayName ("Debe mappear de entidad a modelo")
     void shouldMapBetweenEntityAndModel(){
         nRepo.save(n1);
-
+        assertNull(nMap.toModel(null));
         List<Notification> ls = nRepo.findByReceiverId(n1.getReceiverId());
 
         List<NotificationModel> modelList = ls.stream().map(nMap::toModel).collect(Collectors.toList());
@@ -150,6 +151,113 @@ public class NotificationRepositoryTest {
         assertEquals(saved.getDateCreated(),model.getDateCreated());
         assertEquals(saved.getDateSent(),model.getDateSent());
         assertEquals(saved.getRequestId(),model.getRequestId());
+    }
+
+    @Test
+    @DisplayName("Debe eliminar una notificacion")
+    void shouldMapBetweenModelAndEntity(){
+        UUID n2NotId = UUID.randomUUID();
+        UUID n2RecId = UUID.randomUUID();
+        UUID n2ReqId = UUID.randomUUID();
+        LocalDateTime created = LocalDateTime.now();
+        LocalDateTime sent = LocalDateTime.now().plusSeconds(2);
+        NotificationModel n2 = new NotificationModel();
+        n2.setId(n2NotId);
+        n2.setReceiverId(n2RecId);
+        n2.setRequestId(n2ReqId);
+        n2.setDateCreated(created);
+        n2.setDateSent(sent);
+        n2.setState(NotificationType.INCOMING_REQUEST);
+        n2.setTitle("Solicitu Entrante");
+        n2.setDescription("Nueva reparación cerca de tí");
+        assertNull(nMap.toEntity(null));
+        Notification entity = nMap.toEntity(n2);
+
+        Notification saved = nRepo.save(entity);
+        NotificationModel model = n2;
+
+        assertEquals(saved.getId(),model.getId());
+        assertEquals(saved.getReceiverId(),model.getReceiverId());
+        assertEquals(saved.getTitle(),model.getTitle());
+        assertEquals(saved.getDescription(),model.getDescription());
+        assertEquals(saved.getState(), model.getState());
+        assertEquals(saved.getDateCreated(),model.getDateCreated());
+        assertEquals(saved.getDateSent(),model.getDateSent());
+        assertEquals(saved.getRequestId(),model.getRequestId());
+    }
+
+    @Test
+    @DisplayName("Debe eliminar una notificacion")
+    void shouldDeleteNotification(){
+        Notification saved = nRepo.save(n1);
+
+        nRepo.deleteById(saved.getId());
+
+        List<Notification> ls = nRepo.findByReceiverId(saved.getReceiverId());
+
+        assertFalse(ls.contains(saved));
+
+        Optional<Notification> optional = nRepo.findById(saved.getId());
+
+        assertTrue(optional.isEmpty());
+    }
+
+    @Test 
+    @DisplayName("Debe actualizar una notificacion")
+    void shouldUpdateNotification(){
+        Notification saved = nRepo.save(n1);
+
+        Optional<Notification> found = nRepo.findById(saved.getId());
+
+        assertFalse(found.isEmpty());
+
+        Notification modifying = found.orElse(null);
+
+        modifying.setTitle("Solicitud no enviada");
+
+        nRepo.save(modifying);
+
+        Optional<Notification> newFound = nRepo.findById(modifying.getId());
+
+        assertFalse(newFound.isEmpty());
+        assertTrue(modifying.getTitle().equals(newFound.orElse(null).getTitle()));
+    }
+
+    @Test 
+    @DisplayName("Debe encontrar las notificaciones a partir de la id de request")
+    void shouldFindByRequestId(){
+        UUID n1NotId = UUID.randomUUID();
+        UUID n1RecId = n1.getReceiverId();
+        UUID n1ReqId = n1.getRequestId();
+        LocalDateTime created = LocalDateTime.now();
+        LocalDateTime sent = LocalDateTime.now().plusSeconds(2);
+        Notification n2 = new Notification();
+        n2.setId(n1NotId);
+        n2.setReceiverId(n1RecId);
+        n2.setRequestId(n1ReqId);
+        n2.setDateCreated(created);
+        n2.setDateSent(sent);
+        n2.setState(NotificationType.INCOMING_REQUEST);
+        n2.setTitle("Solicitu Entrante");
+        n2.setDescription("Nueva reparación cerca de tí");
+
+        Notification saved = nRepo.save(n1);
+        Notification saved2 = nRepo.save(n2);
+
+        assertNotNull(saved);
+        assertEquals(n1.getTitle(),saved.getTitle());
+        assertEquals(n1.getId(),saved.getId());
+        assertEquals(n1.getDescription(),saved.getDescription());
+        assertEquals(n1.getReceiverId(),saved.getReceiverId());
+        assertEquals(n1.getRequestId(),saved.getRequestId());
+
+        List<Notification> ls = nRepo.findByRequestId(n1ReqId);
+
+        assertEquals(ls.size(),2);
+        assertTrue(ls.contains(saved));
+        assertTrue(ls.contains(saved2));
+        assertEquals(ls.get(0).getReceiverId(),n1.getReceiverId());
+        assertEquals(ls.get(1).getReceiverId(),n1.getReceiverId());
     }
 
 }
