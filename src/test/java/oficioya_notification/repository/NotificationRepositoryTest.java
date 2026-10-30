@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
+import oficioya_notification.TestcontainersConfiguration;
 import oficioya_notification.entity.Notification;
 import oficioya_notification.model.NotificationModel;
 import oficioya_notification.mapper.NotificationMapper;
@@ -22,6 +25,8 @@ import java.util.stream.Collectors;
 
 @DataJpaTest
 @ActiveProfiles("test")
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Import(TestcontainersConfiguration.class)
 public class NotificationRepositoryTest {
     @Autowired 
     private NotificationRepository nRepo;
