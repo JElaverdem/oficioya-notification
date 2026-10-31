@@ -10,6 +10,7 @@ import oficioya_notification.model.NotificationType;
 @Table(name = "Notifications")
 public class Notification {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(name = "receiver_id", nullable = false)

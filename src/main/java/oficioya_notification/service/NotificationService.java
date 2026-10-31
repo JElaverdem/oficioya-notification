@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import oficioya_notification.dto.NotificationRequest;
 import oficioya_notification.dto.NotificationResponse;
 import oficioya_notification.entity.Notification;
 import oficioya_notification.mapper.ResponseMapper;
@@ -38,13 +39,29 @@ public class NotificationService {
     }
 
     public List<NotificationResponse> findAllForARequest(UUID requestId, UUID receiverId){
+        /*
+        Verificar si existe o no la request, si no existe, mandar exception y hacer un handler
+         */
         return notificationRepository.findByRequestIdAndReceiverId(requestId, receiverId).stream().map(responseMapper::toResponse).toList();
     }
 
-    public void sendNotification(UUID userId){
+    public NotificationResponse sendNotification(NotificationRequest request){
         /*
         Lógica de conexión a firebase API para enviar una notificacion
          */
+
+        Notification noti = responseMapper.toNotification(request);
+        noti.setDateSent(noti.getDateCreated());
+
+        return responseMapper.toResponse(notificationRepository.save(noti));
+    }
+
+    public boolean deleteNotification(UUID requestId){
+        if (!notificationRepository.existsById(requestId)){
+            return false;
+        }
+        notificationRepository.deleteById(requestId);
+        return true;
     }
     
 }
