@@ -7,5 +7,5 @@ import java.util.UUID;
 
 public interface NotificationRepository extends JpaRepository<Notification, UUID>{
     List<Notification> findByReceiverId(UUID receiverId);
-    List<Notification> findByRequestId(UUID requestId);
+    List<Notification> findByRequestIdAndReceiverId(UUID requestId, UUID receiverId);
 }

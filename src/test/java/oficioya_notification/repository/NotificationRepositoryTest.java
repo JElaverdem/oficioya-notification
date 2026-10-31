@@ -256,7 +256,7 @@ public class NotificationRepositoryTest {
         assertEquals(n1.getReceiverId(),saved.getReceiverId());
         assertEquals(n1.getRequestId(),saved.getRequestId());
 
-        List<Notification> ls = nRepo.findByRequestId(n1ReqId);
+        List<Notification> ls = nRepo.findByRequestIdAndReceiverId(n1ReqId,saved.getReceiverId());
 
         assertEquals(ls.size(),2);
         assertTrue(ls.contains(saved));
