@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,15 @@ public class NotificationController {
         this.notificationService = notificationService;
     }
 
+    @PutMapping 
+    @Operation(summary="Send a notification", description = "Sends a notification and stores it in the database")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<NotificationResponse> send(@Valid @RequestBody NotificationRequest notification){
+        NotificationResponse response = notificationService.sendNotification(notification);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+    
     @GetMapping("/{id}")
     @Operation(summary = "Get a notification by its id", description = "Gets the dto of the notification by the id given")
     @PreAuthorize("hasAnyRole('CONTRATANTE', 'TRABAJADOR')")
@@ -64,16 +74,6 @@ public class NotificationController {
          */
         return ResponseEntity.status(HttpStatus.OK).body(notificationService.findAllForARequest(requestId, userId));
     }
-
-    @PostMapping 
-    @Operation(summary="Send a notification", description = "Sends a notification and stores it in the database")
-    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<NotificationResponse> send(@Valid @RequestBody NotificationRequest notification){
-        NotificationResponse response = notificationService.sendNotification(notification);
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
-    }
-
     
     @DeleteMapping("/{id}")
     @Operation(summary="Delete a notification", description="Deletes a notification with its id, only an admin can do it")
