@@ -33,7 +33,7 @@ public class NotificationController {
         this.notificationService = notificationService;
     }
 
-    @PutMapping 
+    @PostMapping 
     @Operation(summary="Send a notification", description = "Sends a notification and stores it in the database")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<NotificationResponse> send(@Valid @RequestBody NotificationRequest notification){
